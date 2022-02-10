@@ -137,7 +137,7 @@ void DetectorConstruction::ConstructPhotosensors(G4VPhysicalVolume* world_phys_v
 
   for (G4int i=0; i<num_phsensors/2; ++i) {
 
-    phsensor_id = i;
+    phsensor_id = (num_phsensors/2)+i;
 
     G4ThreeVector pos(+plate_width_/2. + 1.*mm,
                       0.,
