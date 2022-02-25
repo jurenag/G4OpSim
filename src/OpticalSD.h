@@ -22,6 +22,7 @@ public:
   void Initialize(G4HCofThisEvent*) override;
   G4bool ProcessHits(G4Step*, G4TouchableHistory*) override;
   void EndOfEvent(G4HCofThisEvent*) override;
+  static G4String GetCollectionUniqueName() {return "Optical";}
 
 private:
   OpticalHitCollection* hc_;
