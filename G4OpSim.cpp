@@ -6,7 +6,7 @@
 
 #include "PhysicsList.h"
 #include "DetectorConstruction.h"
-#include "PrimaryGeneration.h"
+#include "RotationallySymGenerator.h"
 #include "RunAction.h"
 #include "EventAction.h"
 #include "TrackingAction.h"
@@ -25,7 +25,7 @@ int main(int argc, char const *argv[])
   G4RunManager* runmgr = new G4RunManager();
   runmgr->SetUserInitialization(new PhysicsList());
   runmgr->SetUserInitialization(new DetectorConstruction());
-  runmgr->SetUserAction(new PrimaryGeneration());
+  runmgr->SetUserAction(new RotationallySymGenerator());
   runmgr->SetUserAction(new RunAction());
   runmgr->SetUserAction(new SteppingAction());
   runmgr->Initialize();
