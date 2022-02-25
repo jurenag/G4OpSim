@@ -18,3 +18,9 @@ Regarding the data stored in ./wlsbar_rindex.csv :
 Regarding the data stored in ./paulucci_lar_rindex.csv :
 	The first column comprises energy entries in eV.
 	The second column comprises refractive index entries.
+
+Regarding the data stored in ./*Angle-TH1D.root :
+	It stores a relative intensity TH1D ROOT histogram for the angular distribution of the * LED, in degrees.
+
+Regarding the data stored in ./*Lambda-TH1D.root :
+	It stores a relative intensity TH1D ROOT histogram for the spectrum of the * LED, in nanometers.
