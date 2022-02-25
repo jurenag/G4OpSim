@@ -1,27 +1,28 @@
+
 // -----------------------------------------------------------------------------
-//  G4Basic | RunAction.h
+//  G4Basic | DefaultRunAction.h
 //
 //  User run action class.
 // -----------------------------------------------------------------------------
 
-#ifndef RUN_ACTION_H
-#define RUN_ACTION_H
+#ifndef DEFAULT_RUN_ACTION_H
+#define DEFAULT_RUN_ACTION_H
 
 #include <G4UserRunAction.hh>
 
 class G4Run;
 
 
-class RunAction: public G4UserRunAction
+class DefaultRunAction: public G4UserRunAction
 {
 public:
-  RunAction();
-  virtual ~RunAction();
+  DefaultRunAction();
+  virtual ~DefaultRunAction();
   virtual void BeginOfRunAction(const G4Run*);
   virtual void EndOfRunAction(const G4Run*);
 };
 
-inline RunAction::RunAction() {}
-inline RunAction::~RunAction() {}
+inline DefaultRunAction::DefaultRunAction() {}
+inline DefaultRunAction::~DefaultRunAction() {}
 
 #endif
