@@ -7,8 +7,8 @@
 #include "PhysicsList.h"
 #include "DetectorConstruction.h"
 #include "PrimaryGeneration.h"
-#include "RunAction.h"
-#include "EventAction.h"
+#include "CountEventAction.h"
+#include "CountRunAction.h"
 #include "TrackingAction.h"
 #include "SteppingAction.h"
 
@@ -26,7 +26,8 @@ int main(int argc, char const *argv[])
   runmgr->SetUserInitialization(new PhysicsList());
   runmgr->SetUserInitialization(new DetectorConstruction());
   runmgr->SetUserAction(new PrimaryGeneration());
-  runmgr->SetUserAction(new RunAction());
+  runmgr->SetUserAction(new CountRunAction());
+  runmgr->SetUserAction(new CountEventAction());
   runmgr->SetUserAction(new SteppingAction());
   runmgr->Initialize();
 
