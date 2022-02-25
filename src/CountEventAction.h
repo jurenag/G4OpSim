@@ -1,27 +1,27 @@
 // -----------------------------------------------------------------------------
-//  G4Basic | EventAction.h
+//  G4Basic | CountEventAction.h
 //
-//  User run action class.
+//  User event action class.
 // -----------------------------------------------------------------------------
 
-#ifndef EVENT_ACTION_H
-#define EVENT_ACTION_H
+#ifndef COUNT_EVENT_ACTION_H
+#define COUNT_EVENT_ACTION_H
 
 #include <G4UserEventAction.hh>
 
 class G4Event;
 
 
-class EventAction: public G4UserEventAction
+class CountEventAction: public G4UserEventAction
 {
 public:
-  EventAction();
-  virtual ~EventAction();
+  CountEventAction();
+  virtual ~CountEventAction();
   virtual void BeginOfEventAction(const G4Event*);
   virtual void EndOfEventAction(const G4Event*);
 };
 
-inline EventAction::EventAction() {}
-inline EventAction::~EventAction() {}
+inline CountEventAction::CountEventAction() {}
+inline CountEventAction::~CountEventAction() {}
 
 #endif
